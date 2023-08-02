@@ -1,0 +1,36 @@
+{% extends "user_header.html" %}
+{% block body %}
+<div class="container">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+
+      <th scope="col">Name</th>
+      <th scope="col">Contact</th>
+      <th scope="col">Address</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Email</th>
+       <th scope="col">Created Date</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for row in value %}
+    <tr>
+      <td>{{ row[1] }}</td>
+      <td>{{ row[2] }}</td>
+      <td>{{ row[3] }}</td>
+      <td>{{ row[4] }}</td>
+      <td>{{ row[5] }}</td>
+      <td>{{ row[6] }}</td>
+      <td>{{ row[7] }}</td>
+      <td>{{ row[8] }}</td>
+       <td>{{ row[9] }}</td>
+    </tr>
+ {% endfor %}
+  </tbody>
+</table>
+  </div>
+{% endblock %}

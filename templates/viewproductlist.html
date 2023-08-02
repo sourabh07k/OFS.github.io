@@ -1,0 +1,27 @@
+{% extends "admin_header.html" %}
+{% block body %}
+<div class="container">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">File</th>
+      <th scope="col">Date</th>
+      <th scope="col">Type</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for row in value %}
+    <tr>
+      <td>{{ row[1] }}</td>
+      <td><img src="{{ row[2] }}" height="50" width="50"> </td>
+      <td>{{ row[3] }}</td>
+       <td>{{ row[4] }}</td>
+         <td>{{ row[5] }}</td>
+    </tr>
+ {% endfor %}
+  </tbody>
+</table>
+  </div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "admin_header.html" %}
+{% block body %}
+<form action="{{ url_for('addproduct') }}" method="post">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="container">
+                <h2>Add Product...!</h2>
+                <br>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <label>Product Name</label>
+                        <input type="text"  name="pname" placeholder="Product name" class="form-control" onkeypress="javascript:return isString(event)" required>
+
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <label>Image</label>
+                        <input name="file" class="form-control" type="file" required>
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+                 <br>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <label>Date</label>
+                        <input name="date" class="form-control"  type="date" required>
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <label>Category Type</label>
+                        <input name="ctype" class="form-control" placeholder="Category type" onkeypress="javascript:return isString(event)" required>
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+                  <br>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <label>Amount</label>
+                        <input name="pprice" class="form-control" placeholder="Price" onkeypress="javascript:return isNumber(event)" required>
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <input type="submit" value="Add" class="btn btn-info" name="btnsubmit">
+                        <input type="reset" value="Cancel" class="btn btn-danger" name="btnsubmit">
+                    </div>
+                    <div class="col-sm-1"></div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+    </form>
+<br>
+{% endblock %}
